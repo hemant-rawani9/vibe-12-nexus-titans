@@ -248,5 +248,8 @@ Build with `npm run build` and run with `npm start`, or deploy to a Next.js-comp
 ---
 
 **Nexus Titans · Loop campus mobility**
-
+Inspring mobility and technology.
+Loop- Small rides.Stronger connections.Made and maintained by
+Subendu Kundu-  Principal Engineer <p>https://github.com/Subendu79<p/>
+& Hemant Kumar Rawani - Lead Engineer. <p>https://www.linkedin.com/in/hemant-kumar-rawani-76b69a252/<p/>
 © 2026 Loop Interactive. All rights reserved.
