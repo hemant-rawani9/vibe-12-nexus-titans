@@ -1,0 +1,9 @@
+'use client';
+import {useState} from 'react';
+import {ArrowUpRight,GraduationCap,TrainFront,BriefcaseBusiness,ArrowRight} from 'lucide-react';
+import {TotoArt} from './brand';
+const stops=[{name:'College',label:'For the early lectures. And the late ones.',icon:GraduationCap},{name:'Railway Station',label:'Your connection to what comes next.',icon:TrainFront},{name:'Office',label:'A little less commute. A little more day.',icon:BriefcaseBusiness}];
+export function CampusExperience(){
+ const [selected,setSelected]=useState(0);const stop=stops[selected];const Icon=stop.icon;
+ return <section className="campus-experience" aria-label="Explore the campus stops"><div className="scene-heading"><span className="eyebrow">SMALL RIDES. STRONGER CONNECTIONS.</span><span className="scene-edition">L / 01</span></div><h2>Your campus.<br/><span>In good company.</span></h2><div className={'campus-scene scene-stop-'+selected}><div className="scene-orbit orbit-one"/><div className="scene-orbit orbit-two"/><span className="scene-word" aria-hidden="true">MOVE</span><div className="scene-platform"/><div className="scene-building building-one"/><div className="scene-building building-two"/><div className="scene-toto"><TotoArt/></div><span className="scene-pin pin-one"><GraduationCap size={18}/></span><span className="scene-pin pin-two"><TrainFront size={18}/></span><span className="scene-pin pin-three"><BriefcaseBusiness size={18}/></span><div className="scene-ticket" key={selected}><Icon size={20}/><span>{stop.name}<small>LOOP CAMPUS</small></span><ArrowUpRight size={18}/></div></div><div className="scene-stops" aria-label="Campus stops">{stops.map((item,index)=><button key={item.name} onClick={()=>setSelected(index)} aria-pressed={selected===index}><span>0{index+1}</span>{item.name}<ArrowRight size={14}/></button>)}</div><p className="scene-caption" aria-live="polite">{stop.label}</p></section>;
+}
